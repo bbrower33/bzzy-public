@@ -1,11 +1,11 @@
-# Bzzy Local Landscaping Marketplace
+# Bzzy Landscaping Marketplace
 
 A full-stack marketplace application connecting clients with 
 local landscaping providers. Clients discover and filter providers 
 by service type, location, and price. Providers manage their 
 profiles, services, availability, and business details.
 
-> ⚠️ This is a public showcase repository. Sensitive business 
+> This is a public showcase repository. Sensitive business 
 > logic, credentials, and proprietary implementation details 
 > are maintained in a private repository.
 
@@ -43,7 +43,7 @@ profiles, services, availability, and business details.
 
 ## Current State
 
-### ✅ Built & Working
+### Built & Working
 - Mobile app client discovery and provider search flow
 - Service filtering by type, location, and price
 - Supabase auth with role-based user logic (client, 
@@ -55,7 +55,7 @@ profiles, services, availability, and business details.
 - Supabase Storage buckets for profile pics, banners, 
   and portfolio media
 
-### 🔧 In Progress / Planned
+### In Progress / Planned
 - Scheduling and job management workflows
 - Payment integration
 - Messaging and quoting flows
@@ -151,7 +151,7 @@ def list_providers(
 
 ## Status
 
-🟡 **Active development** — core marketplace flow is 
+**Active development** — core marketplace flow is 
 functional. Production deployment, payments, and 
 scheduling workflows are next.
 
