@@ -1,3 +1,8 @@
+param (
+    [Parameter(Mandatory=$true, HelpMessage="Enter your Git commit message")]
+    [string]$Message
+)
+
 # Powershell command to effectively push changes to the correct branch
 # of the repository for ease of use.
 #
