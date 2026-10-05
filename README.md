@@ -1,4 +1,4 @@
-# Bzzy Public Landing Page 
+# Bzzy Public Landing Page
 
 Standalone static landing page for [bzzy.app](https://bzzy.app).
 
