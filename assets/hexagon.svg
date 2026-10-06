@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="120" viewBox="0 0 140 120" fill="none">
+  <!--
+    Seamless point-up honeycomb tile matching the reference image.
+
+    The hexagon retains the proportions of the original 24 x 24 asset:
+    M12 2.6 20 7.3v9.4L12 21.4 4 16.7V7.3z
+
+    Center rhythm: 70px horizontally, 60px vertically.
+    Alternate-row offset: 35px.
+  -->
+  <defs>
+    <path id="hex" d="M0-30.55 26-15.275V15.275L0 30.55-26 15.275V-15.275Z" />
+  </defs>
+  <g stroke="#F2EAD8" stroke-width="4.8" stroke-linejoin="miter">
+    <use href="#hex" transform="translate(0 0)" />
+    <use href="#hex" transform="translate(70 0)" />
+    <use href="#hex" transform="translate(140 0)" />
+
+    <use href="#hex" transform="translate(35 60)" />
+    <use href="#hex" transform="translate(105 60)" />
+
+    <use href="#hex" transform="translate(0 120)" />
+    <use href="#hex" transform="translate(70 120)" />
+    <use href="#hex" transform="translate(140 120)" />
+  </g>
+</svg>
