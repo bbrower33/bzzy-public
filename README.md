@@ -8,14 +8,6 @@ The site has no build step or application dependency. It consists of:
 - `styles.css`
 - Local assets and fonts under `assets/`
 
-## Local preview
-
-```powershell
-python -m http.server 8080
-```
-
-Then open [http://localhost:8080](http://localhost:8080).
-
 ## Deployment
 
 Serve the repository root as a static site. The email notification form uses
@@ -31,14 +23,6 @@ The site has no build step or application dependency. It consists of:
 - `index.html`
 - `styles.css`
 - Local assets and fonts under `assets/`
-
-## Local preview
-
-```powershell
-python -m http.server 8080
-```
-
-Then open [http://localhost:8080](http://localhost:8080).
 
 ## Deployment
 
