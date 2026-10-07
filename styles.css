@@ -112,6 +112,38 @@ h1 { max-width: 700px; margin-bottom: 1.25rem; font-size: clamp(3rem, 7vw, 5.8re
 .about-copy p { margin: 0; }
 .about-copy p + p { margin-top: 1.25rem; }
 
+.faq {
+  padding-top: 7rem;
+  display: grid;
+  grid-template-columns: minmax(280px, 416px) minmax(0, 1fr);
+  align-items: start;
+  gap: 4rem;
+  border-top: 1px solid var(--line);
+}
+.faq-intro { position: sticky; top: 2rem; }
+.faq-intro h2 { max-width: 420px; margin-bottom: 1.1rem; font-size: clamp(2.25rem, 4vw, 3.7rem); line-height: 1.04; letter-spacing: -.055em; }
+.faq-intro > p:not(.section-kicker, .buzz-note) { max-width: 390px; margin-bottom: 0; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+.faq-intro .buzz-note { margin-top: 1.5rem; }
+.faq-list { display: grid; gap: 1rem; }
+.faq-item { margin: 0; overflow: clip; border: 1px solid var(--line); border-radius: 1rem; background: rgba(255, 253, 247, .94); box-shadow: 0 10px 28px rgba(38, 36, 31, .035); }
+.faq-item summary { min-height: 64px; padding: 1.15rem 4rem 1.15rem 1.25rem; position: relative; display: flex; align-items: center; color: var(--ink); font-size: .98rem; font-weight: 800; line-height: 1.45; list-style: none; cursor: pointer; user-select: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: ""; width: 28px; height: 28px; position: absolute; top: 50%; right: 1.1rem; border-radius: 50%; background-color: var(--honey); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 1v10M1 6h10' fill='none' stroke='%231c1c1a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); background-position: center; background-repeat: no-repeat; background-size: 12px 12px; transform: translateY(-50%); }
+.faq-item[open] summary::after { content: "\2212"; display: flex; align-items: center; justify-content: center; padding-bottom: 2px; color: var(--ink); background-image: none; font: 700 18px/1 Arial, sans-serif; }
+.faq-item summary:hover::after { background-color: var(--honey-hover); }
+.faq-item summary:focus-visible { outline: 3px solid rgba(246, 183, 35, .35); outline-offset: -3px; border-radius: calc(1rem - 1px); }
+.faq-answer { padding: 0 1.25rem 1.3rem; color: var(--muted); font-size: .9rem; line-height: 1.65; animation: faq-rise 180ms cubic-bezier(.2, .9, .25, 1) both; }
+.faq-answer p { margin: .75rem 0 0; }
+.faq-answer p:first-child { margin-top: .2rem; }
+.faq-answer ul { margin: .75rem 0 0; padding-left: 1.2rem; }
+.faq-answer li + li { margin-top: .35rem; }
+.faq-answer strong { color: var(--ink); }
+
+@keyframes faq-rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .final-signup { margin-top: 0; margin-bottom: 6rem; padding: 2.2rem; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; border-radius: 1.2rem; color: var(--background); background: var(--ink); }
 .final-signup .final-bee-disc {
   width: 52px;
@@ -141,6 +173,9 @@ footer p { margin: 0; }
   .steps li + li { border-left: 0; border-top: 0; }
   .about { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-copy { max-width: 650px; margin: 0; }
+  .faq { grid-template-columns: 1fr; gap: 2.5rem; }
+  .faq-intro { position: static; }
+  .faq-intro h2, .faq-intro > p:not(.section-kicker, .buzz-note) { max-width: 650px; }
   .final-signup { grid-template-columns: auto 1fr; }
   .final-signup .button { grid-column: 1 / -1; }
 }
@@ -162,9 +197,16 @@ footer p { margin: 0; }
   .about { padding-top: 3rem; padding-bottom: 3rem; }
   .about-copy { font-size: 1rem; line-height: 1.65; }
   .about-copy p + p { margin-top: 1rem; }
+  .faq { padding-top: 4.5rem; padding-bottom: 4.5rem; gap: 2rem; }
+  .faq-intro h2 { margin-bottom: .9rem; }
+  .faq-intro .buzz-note { margin-top: 1.25rem; }
+  .faq-list { gap: .75rem; }
+  .faq-item summary { min-height: 56px; padding: .95rem 3.5rem .95rem 1rem; font-size: .92rem; }
+  .faq-item summary::after { right: .9rem; }
+  .faq-answer { padding: 0 1rem 1.1rem; font-size: .86rem; }
   .final-signup { padding: 1.5rem; grid-template-columns: 1fr; text-align: center; justify-items: center; }
   footer { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .copyright { text-align: center; }
 }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .faq-answer { animation: none; } }
