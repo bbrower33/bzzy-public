@@ -1,4 +1,4 @@
-# Bzzy
+# Bzzy Public Landing Page
 
 Bzzy is a two-sided marketplace app for web, iOS, and Android designed to make finding and booking local landscaping help as simple as making a restaurant reservation.
 
