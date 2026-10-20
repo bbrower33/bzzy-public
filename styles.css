@@ -37,7 +37,7 @@ a { color: inherit; }
 button, input { font: inherit; }
 .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; padding: .75rem 1rem; border-radius: .5rem; color: white; background: var(--ink); }
 .skip-link:focus { top: 1rem; }
-.site-header, .hero, .section, .final-signup, footer { width: min(1040px, calc(100% - 3rem)); margin-inline: auto; }
+.site-header, .hero, .section, .final-signup, .support-section, footer { width: min(1040px, calc(100% - 3rem)); margin-inline: auto; }
 
 .site-header { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 .brand img { width: 154px; }
@@ -156,6 +156,19 @@ h1 { max-width: 700px; margin-bottom: 1.25rem; font-size: clamp(3rem, 7vw, 5.8re
 .final-signup h2 { margin: 0; font-size: clamp(1.65rem, 3vw, 2.6rem); }
 .final-signup .button { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; }
 
+.support-section { margin-bottom: 6rem; padding: 2rem; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1.5rem; border: 1px solid var(--line); border-radius: 1.2rem; background: var(--surface); box-shadow: 0 12px 35px rgba(38, 36, 31, .06); }
+.support-section[hidden] { display: none; }
+.venmo-support-enabled .final-signup { margin-bottom: 1rem; }
+.support-mark { width: 52px; height: 62px; display: grid; place-items: center; background: rgba(246, 183, 35, .22); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.support-mark img { width: 44px; }
+.support-copy { max-width: 650px; }
+.support-copy .section-kicker { margin-bottom: .35rem; }
+.support-copy h2 { margin-bottom: .65rem; font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.1; letter-spacing: -.04em; }
+.support-copy > p:not(.section-kicker, .support-note) { margin-bottom: .65rem; color: var(--muted); font-size: .92rem; line-height: 1.65; }
+.support-note { margin: 0; color: var(--muted); font-size: .72rem; }
+.support-button { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; white-space: nowrap; }
+.support-button:focus-visible { outline: 3px solid rgba(246, 183, 35, .4); outline-offset: 3px; }
+
 footer { padding: 2rem 0 3rem; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
 footer img { width: 108px; }
 footer p { margin: 0; }
@@ -178,10 +191,12 @@ footer p { margin: 0; }
   .faq-intro h2, .faq-intro > p:not(.section-kicker, .buzz-note) { max-width: 650px; }
   .final-signup { grid-template-columns: auto 1fr; }
   .final-signup .button { grid-column: 1 / -1; }
+  .support-section { grid-template-columns: auto 1fr; }
+  .support-button { grid-column: 1 / -1; justify-self: stretch; }
 }
 
 @media (max-width: 560px) {
-  .site-header, .hero, .section, .final-signup, footer { width: min(100% - 2rem, 1040px); }
+  .site-header, .hero, .section, .final-signup, .support-section, footer { width: min(100% - 2rem, 1040px); }
   .site-header { min-height: 78px; }
   .brand img { width: 124px; }
   .nav-cta { font-size: .78rem; }
@@ -205,6 +220,9 @@ footer p { margin: 0; }
   .faq-item summary::after { right: .9rem; }
   .faq-answer { padding: 0 1rem 1.1rem; font-size: .86rem; }
   .final-signup { padding: 1.5rem; grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .support-section { padding: 1.5rem; grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .support-copy > p:not(.section-kicker, .support-note) { font-size: .88rem; }
+  .support-button { width: 100%; white-space: normal; }
   footer { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .copyright { text-align: center; }
 }

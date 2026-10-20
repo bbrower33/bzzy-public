@@ -6,7 +6,14 @@ The site has no build step or application dependency. It consists of:
 
 - `index.html`
 - `styles.css`
+- `config.js`
 - Local assets and fonts under `assets/`
+
+## Venmo support link
+
+Set `venmoUrl` in `config.js` to a full HTTPS Venmo profile URL. The support
+section stays hidden when the value is blank, malformed, or does not point to
+`venmo.com`.
 
 ## Local preview
 
